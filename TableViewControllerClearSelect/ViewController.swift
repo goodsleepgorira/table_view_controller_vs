@@ -1,25 +1,32 @@
 //
 //  ViewController.swift
-//  TableViewControllerClearSelect
-//
-//  Created by 齋藤緒 on 2016/06/15.
-//  Copyright © 2016年 TestOrganization. All rights reserved.
 //
 
 import UIKit
 
 class ViewController: UIViewController {
 
+    @IBOutlet weak var testImageView: UIImageView!
+    @IBOutlet weak var testNavBar: UINavigationBar!
+    
+    var testTitle:String!
+    var testImage:UIImage!
+    
+    
+    //最初からあるメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
-        // Do any additional setup after loading the view, typically from a nib.
+        
+        testImageView.image = testImage
+        testNavBar.topItem?.title = testTitle
     }
-
-    override func didReceiveMemoryWarning() {
-        super.didReceiveMemoryWarning()
-        // Dispose of any resources that can be recreated.
+    
+    //ボタン押下時の呼び出しメソッド
+    @IBAction func pushButton(sender: UIBarButtonItem) {
+    
+        //モーダル表示されているビューコントローラーを解放する。
+        self.dismissViewControllerAnimated(true, completion:nil)
     }
-
 
 }
 
