@@ -13,6 +13,9 @@ class TestTableViewController: UITableViewController {
     //最初からあるメソッド
     override func viewDidLoad() {
         super.viewDidLoad()
+        
+        //ビューが表示されるときにレコードの選択を解除しない。
+        //clearsSelectionOnViewWillAppear = false
     }
     
     
